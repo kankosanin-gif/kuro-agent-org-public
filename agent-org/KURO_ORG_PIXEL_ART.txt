@@ -1,0 +1,31 @@
+Kuro Agent Organization (Pixel Art)
+
+                         ███████
+                       ███     ███
+                     ███  KURO  ███
+                       ███     ███
+                         ███████
+                            │
+   ┌────────────────────────┼────────────────────────┐
+   │                        │                        │
+██████████            ██████████               ██████████
+█PLANNING█            █DEVELOPM█               █ DESIGN █
+█ MANAGER█            █ MANAGER█               █ MANAGER█
+██████████            ██████████               ██████████
+   │                        │                        │
+ █REQ█ █STK█ █RMP█     █DOM█ █APP█ █INT█      █ UX █ █UI █ █IXD█
+
+██████████            ██████████               ██████████
+█ QA-QC  █            █DEVSECOP█               █OPERATIONS
+█ MANAGER█            █ MANAGER█               █ MANAGER█
+██████████            ██████████               ██████████
+   │                        │                        │
+ █TST█ █AQA█ █AUD█      █CIC█ █SEC█ █REL█      █SRV█ █SUP█ █KBM█
+
+Legend:
+REQ=Requirements Analyst, STK=Stakeholder Coordinator, RMP=Roadmap Planner
+DOM=Domain Architect, APP=Application Engineer, INT=Integration Engineer
+UX=UX Strategist, UI=UI System Designer, IXD=Interaction Designer
+TST=Test Strategist, AQA=Automation QA Engineer, AUD=Quality Auditor
+CIC=CI-CD Engineer, SEC=Security Engineer, REL=Reliability Engineer
+SRV=Service Operator, SUP=Support Coordinator, KBM=Knowledge Manager
