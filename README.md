@@ -22,6 +22,14 @@ This repository demonstrates a practical, standards-aligned agent operating mode
 - [Phase 3 Quality Gates](agent-org/PHASE3_QUALITY_GATES.md)
 - [Case Study: Ready but 404](docs/case-studies/404-investigation.md)
 - [Ops: Hourly Reporting](docs/ops/hourly-reporting.md)
+- [OSS Split Status (A/B/C/D)](docs/OSS_EXECUTION_STATUS.md)
+
+## OSS product split (A/B/C/D)
+
+- [A — Agent Execution Ledger](products/A-execution-ledger/README.md)
+- [B — ContractSpec TOML](products/B-contractspec-toml/README.md)
+- [C — Agent Team Router](products/C-agent-team-router/README.md)
+- [D — Portfolio Ops Kit](products/D-portfolio-ops-kit/README.md)
 
 ## Repository map
 
@@ -46,6 +54,7 @@ This repository demonstrates a practical, standards-aligned agent operating mode
   - `task-contract.md`
   - `gate-failure.md`
   - `manager-weekly-review.md`
+- `docs/EXTERNAL_OSS_TRACKER.md`
 
 ## Execution philosophy
 
