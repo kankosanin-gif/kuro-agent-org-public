@@ -31,6 +31,12 @@
 - C: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
 - D: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
 
+## Operationalization rollout (W-003)
+- A: Issue #5 / PR #6 (work-item log + weekly review template)
+- B: Issue #5 / PR #6 (work-item log + weekly review template)
+- C: Issue #5 / PR #6 (work-item log + weekly review template)
+- D: Issue #5 / PR #6 (work-item log + weekly review template)
+
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
 - Tarot product remains private by operator policy.
