@@ -43,6 +43,12 @@
 - C: Issue #7 / PR #8 (Symphony runbook)
 - D: Issue #7 / PR #8 (Symphony runbook)
 
+## KPI rollout (W-005)
+- A: Issue #9 / PR #10 (KPI snapshot + blocker-aging metrics)
+- B: Issue #9 / PR #10 (KPI snapshot + blocker-aging metrics)
+- C: Issue #9 / PR #10 (KPI snapshot + blocker-aging metrics)
+- D: Issue #9 / PR #10 (KPI snapshot + blocker-aging metrics)
+
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
 - Tarot product remains private by operator policy.
