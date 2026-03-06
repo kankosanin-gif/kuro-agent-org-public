@@ -11,7 +11,13 @@
 - [x] B published
 - [x] C published
 - [x] D published
-- [ ] Next step: move each product to standalone public repositories (1 product = 1 repo)
+- [~] Standalone repo migration in progress
+
+## Standalone repos (1 product = 1 repo)
+- A: https://github.com/kankosanin-gif/product-a-execution-ledger (created)
+- B: pending
+- C: pending
+- D: pending
 
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
