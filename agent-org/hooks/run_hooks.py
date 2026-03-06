@@ -3,7 +3,12 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path('/Users/Antares/.openclaw/workspace')
+try:
+    import tomllib  # py311+
+except Exception:
+    tomllib = None
+
+ROOT = Path('/Users/Antares/.openclaw/workspace/kuro-agent-org-public')
 
 
 def read_text(rel):
@@ -36,13 +41,20 @@ def mark_fired(rel, hook_id, stamp):
         f.write(f"{hook_id}:{stamp}\n")
 
 
-def main():
-    cfg_path = ROOT / 'agent-org/hooks/hooks.json'
-    state_path = 'agent-org/reports/hook-state.log'
-    if not cfg_path.exists():
-        return
+def load_hooks_config():
+    cfg_json = ROOT / 'agent-org/hooks/hooks.json'
+    cfg_toml = ROOT / 'agent-org/hooks/hooks.toml'
 
-    cfg = json.loads(cfg_path.read_text(encoding='utf-8'))
+    if cfg_toml.exists() and tomllib is not None:
+        return tomllib.loads(cfg_toml.read_text(encoding='utf-8')), 'hooks.toml'
+    if cfg_json.exists():
+        return json.loads(cfg_json.read_text(encoding='utf-8')), 'hooks.json'
+    return {'hooks': []}, 'none'
+
+
+def main():
+    cfg, _ = load_hooks_config()
+    state_path = 'agent-org/reports/hook-state.log'
     hooks = cfg.get('hooks', [])
 
     for h in hooks:
@@ -62,7 +74,6 @@ def main():
         if must_contain and must_contain not in base_text:
             continue
 
-        # Optional any-match
         any_list = h.get('if_any', [])
         if any_list and not any(t in base_text for t in any_list):
             continue

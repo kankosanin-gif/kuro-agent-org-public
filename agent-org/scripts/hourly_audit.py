@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 import datetime as dt
-import json
 import subprocess
 from pathlib import Path
 
-ROOT = Path('/Users/Antares/.openclaw/workspace')
+try:
+    import tomllib
+except Exception:
+    tomllib = None
+
+ROOT = Path('/Users/Antares/.openclaw/workspace/kuro-agent-org-public')
 OUT = ROOT / 'agent-org' / 'reports' / 'hourly-status.md'
 
 
@@ -14,6 +18,16 @@ def run(cmd, cwd=ROOT):
         return p.returncode, p.stdout.strip(), p.stderr.strip()
     except Exception as e:
         return 1, '', str(e)
+
+
+def detect_hook_config_source():
+    toml_path = ROOT / 'agent-org' / 'hooks' / 'hooks.toml'
+    json_path = ROOT / 'agent-org' / 'hooks' / 'hooks.json'
+    if toml_path.exists() and tomllib is not None:
+        return 'hooks.toml'
+    if json_path.exists():
+        return 'hooks.json'
+    return 'none'
 
 
 def main():
@@ -26,11 +40,14 @@ def main():
     if rc1 != 0 or rc2 != 0:
         summary = 'WARN: git check failed'
 
+    hook_src = detect_hook_config_source()
+
     lines = []
     lines.append(f'# Hourly Report — {now}')
     lines.append('')
     lines.append(f'- Topline: **{summary}**')
     lines.append('- Emergency: **None**')
+    lines.append(f'- Hook Config Source: **{hook_src}**')
     lines.append('')
     lines.append('## Git Working Tree')
     lines.append('```')
@@ -46,9 +63,9 @@ def main():
     lines.append('- Continue portfolio-first execution plan')
     lines.append('- Maintain boundary/security controls')
 
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
 
-    # Trigger hook runner after each hourly report generation
     run(['python3', str(ROOT / 'agent-org' / 'hooks' / 'run_hooks.py')])
 
 
