@@ -25,6 +25,12 @@
 - C: Issue #1 / PR #2
 - D: Issue #1 / PR #2
 
+## Governance template rollout (W-002)
+- A: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
+- B: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
+- C: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
+- D: Issue #3 / PR #4 (Gate Decision Log + Escalation SLA + Proof-of-Work template)
+
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
 - Tarot product remains private by operator policy.
