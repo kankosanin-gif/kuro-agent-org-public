@@ -15,9 +15,15 @@
 
 ## Standalone repos (1 product = 1 repo)
 - A: https://github.com/kankosanin-gif/product-a-execution-ledger (created)
-- B: pending
-- C: pending
-- D: pending
+- B: https://github.com/kankosanin-gif/product-b-contractspec-toml (created)
+- C: https://github.com/kankosanin-gif/product-c-agent-team-router (created)
+- D: https://github.com/kankosanin-gif/product-d-portfolio-ops-kit (created)
+
+## Initial cycle status (Issue -> PR)
+- A: Issue #1 / PR #2
+- B: Issue #1 / PR #2
+- C: Issue #1 / PR #2
+- D: Issue #1 / PR #2
 
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
