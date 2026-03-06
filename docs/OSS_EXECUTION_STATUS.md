@@ -37,6 +37,12 @@
 - C: Issue #5 / PR #6 (work-item log + weekly review template)
 - D: Issue #5 / PR #6 (work-item log + weekly review template)
 
+## Symphony rollout (W-004)
+- A: Issue #7 / PR #8 (Symphony runbook)
+- B: Issue #7 / PR #8 (Symphony runbook)
+- C: Issue #7 / PR #8 (Symphony runbook)
+- D: Issue #7 / PR #8 (Symphony runbook)
+
 ## Notes
 - This repository is public and intended as portfolio-facing evidence.
 - Tarot product remains private by operator policy.
